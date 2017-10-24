@@ -1,0 +1,8 @@
+disabled_rules: # 执行时排除掉的规则
+  - identifier_name
+  - trailing_whitespace
+  - line_length
+  - large_tuple
+  - mark
+excluded: #忽略第三方库
+- Pods

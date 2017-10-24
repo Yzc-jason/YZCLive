@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (4.5.1)
+  - FLEX (2.4.0)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - RxCocoa (4.0.0-rc.0):
+    - RxSwift (~> 4.0.0-rc.0)
+  - RxSwift (4.0.0-rc.0)
+  - SwiftLint (0.23.1)
+  - XCGLogger (6.0.1):
+    - XCGLogger/Core (= 6.0.1)
+  - XCGLogger/Core (6.0.1):
+    - ObjcExceptionBridging
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5.1)
+  - FLEX (~> 2.4.0)
+  - RxCocoa (~> 4.0.0-rc.0)
+  - RxSwift (~> 4.0.0-rc.0)
+  - SwiftLint
+  - XCGLogger (~> 6.0.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  RxCocoa: 62457355be73369670fbdf053a79a491552b64ed
+  RxSwift: 1dd09ceb11531c39adff4efe23556b1484e16967
+  SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
+  XCGLogger: b4ca980580108cfeaf221afe158f5d89c1be22e0
+
+PODFILE CHECKSUM: a900ea61cf1659418b55508dc689671e37c8f1ca
+
+COCOAPODS: 1.2.1
