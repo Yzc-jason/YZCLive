@@ -62,23 +62,21 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
  
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         log.debug(scrollView.contentOffset)
-        var currentOffset:CGFloat = 0.0
         
-        if lastOffset > scrollView.contentOffset.y {  //下拉
-            currentOffset  = lastOffset - scrollView.contentOffset.y
-        }else{ //上拉
-            currentOffset = lastOffset + scrollView.contentOffset.y
+        if scrollView.contentOffset.y > -64 {
+            if lastOffset > scrollView.contentOffset.y {  //下拉
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.navigationController?.navigationBar.yzc_top = 20;
+                    self.navigationController?.tabBarController?.tabBar.yzc_top = UIScreen.main.bounds.size.height - 44
+                })
+            }else{ //上拉
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.navigationController?.navigationBar.yzc_top = -42
+                    self.navigationController?.tabBarController?.tabBar.yzc_top = UIScreen.main.bounds.size.height
+                })
+            }
+            lastOffset =  scrollView.contentOffset.y
         }
-        
-        if currentOffset < -42 {
-            currentOffset = -42
-        }else if currentOffset > 20 {
-            currentOffset = 20
-        }
-        log.debug(String(format: "currentOffset %f", arguments: [currentOffset]))
-        self.navigationController?.navigationBar.yzc_top = currentOffset
-        lastOffset =  scrollView.contentOffset.y
-        
     }
     
     //MARK:- Action
