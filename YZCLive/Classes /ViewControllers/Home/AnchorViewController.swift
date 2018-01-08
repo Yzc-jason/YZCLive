@@ -77,8 +77,8 @@ extension AnchorViewController : UICollectionViewDataSource, WaterfallLayoutData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let roomVc = RoomViewController()
-//        navigationController?.pushViewController(roomVc, animated: true)
+        let roomVc = RoomViewController()
+        navigationController?.pushViewController(roomVc, animated: true)
     }
     
     func waterfallLayout(_ layout: WaterfallLayout, indexPath: IndexPath) -> CGFloat {

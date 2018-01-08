@@ -14,6 +14,14 @@ class NavigationController: UINavigationController,UIGestureRecognizerDelegate {
         super.viewDidLoad()
         self.interactivePopGestureRecognizer?.delegate = self
         self.setNavTheme()
+        
+        guard let targets = interactivePopGestureRecognizer!.value(forKey:  "_targets") as? [NSObject] else { return }
+        let targetObjc = targets[0]
+        let target = targetObjc.value(forKey: "target")
+        let action = Selector(("handleNavigationTransition:"))
+        
+        let panGes = UIPanGestureRecognizer(target: target, action: action)
+        view.addGestureRecognizer(panGes)
     }
     
     private func setNavTheme() {
@@ -43,16 +51,16 @@ class NavigationController: UINavigationController,UIGestureRecognizerDelegate {
         self.isNavigationBarHidden = true
         if self.viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
-            let backButton = UIBarButtonItem.itemWithTarget(target: self,
-                                                            action: #selector(back),
-                                                            imageString: "",
-                                                            highImageString: "")
-
-            let navigateSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace,
-                                                target: nil,
-                                                action: nil)
-            navigateSpace.width = -10
-            viewController.navigationItem.leftBarButtonItems =  [navigateSpace, backButton]
+//            let backButton = UIBarButtonItem.itemWithTarget(target: self,
+//                                                            action: #selector(back),
+//                                                            imageString: "",
+//                                                            highImageString: "")
+//
+//            let navigateSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace,
+//                                                target: nil,
+//                                                action: nil)
+//            navigateSpace.width = -10
+//            viewController.navigationItem.leftBarButtonItems =  [navigateSpace, backButton]
         }
         super.pushViewController(viewController, animated: true)
     }

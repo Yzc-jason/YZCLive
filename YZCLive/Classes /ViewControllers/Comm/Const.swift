@@ -11,6 +11,6 @@ import UIKit
 let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
 
-let kNavigationBarH : CGFloat = UIDevice.current.isX() ? (44 + 34) : 44
+let kNavigationBarH : CGFloat = UIDevice.current.isX() ? (44 + 34) : 64
 let kStatusBarH : CGFloat = 20
 
