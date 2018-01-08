@@ -21,6 +21,9 @@ class NavigationController: UINavigationController,UIGestureRecognizerDelegate {
         navBar.tintColor = UIColor.black
         navBar.barTintColor =  UIColor.black
         navBar.backgroundColor = UIColor.black
+        if UIDevice.current.isX() {
+            navBar.yzc_height =  navBar.yzc_height + 22;
+        }
         
         //设置导航栏字体
         var attr: [NSAttributedStringKey: AnyObject] = [NSAttributedStringKey: AnyObject]()
@@ -29,6 +32,11 @@ class NavigationController: UINavigationController,UIGestureRecognizerDelegate {
         navBar.titleTextAttributes = attr
         
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        if #available(iOS 11.0, *) {
+            self.navigationBar.prefersLargeTitles = false
+            self.navigationItem.largeTitleDisplayMode = .automatic
+        }
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -57,5 +65,4 @@ class NavigationController: UINavigationController,UIGestureRecognizerDelegate {
         if self.viewControllers.count <= 1 { return false }
         return true
     }
-
 }

@@ -10,8 +10,6 @@ import UIKit
 
 class CustomTabBarController: UITabBarController,YZCTabbarDelegate {
    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,18 +17,21 @@ class CustomTabBarController: UITabBarController,YZCTabbarDelegate {
         let tabbar = YZCTabbar()
         tabbar.tabBardelegate = self
         self.setValue(tabbar, forKey: "tabBar")
-        
+        if UIDevice.current.isX() {
+            self.tabBar.yzc_height = self.tabBar.yzc_height + 34
+        }
     }
+
     
     private func setupController() {
         let homeVC = HomeController()
-        self.addChildVC(childVc: homeVC, title: "广场", image: "toolbar_home", selectImage: "toolbar_home_sel")
+        self.addChildVC(childVc: homeVC, title: "广场", image: "MJ_toolbar_home_1_44x44_", selectImage: "MJ_toolbar_home_sel_1_44x44_")
         let videoVC = ShortViewController()
-        self.addChildVC(childVc: videoVC, title: "短视频", image: "toolbar_video", selectImage: "toolbar_video_sel")
+        self.addChildVC(childVc: videoVC, title: "短视频", image: "MJ_toolbar_video_1_44x44_", selectImage: "MJ_toolbar_video_sel_1_44x44_")
         let gameVC = GameController()
-        self.addChildVC(childVc: gameVC, title: "游戏中心", image: "toolbar_game", selectImage: "toolbar_game_sel")
+        self.addChildVC(childVc: gameVC, title: "游戏中心", image: "MJ_toolbar_game_1_44x44_", selectImage: "MJ_toolbar_game_sel_1_44x44_")
         let profileVC = ProfileController()
-        self.addChildVC(childVc: profileVC, title: "我的", image: "toolbar_me", selectImage: "toolbar_me_sel")
+        self.addChildVC(childVc: profileVC, title: "我的", image: "MJ_toolbar_me_1_44x44_", selectImage: "MJ_toolbar_me_sel_1_44x44_")
     }
     
     private func addChildVC(childVc: UIViewController, title: String, image: String, selectImage: String) {
@@ -39,10 +40,11 @@ class CustomTabBarController: UITabBarController,YZCTabbarDelegate {
         let nav = NavigationController(rootViewController: childVc)
         nav.isNavigationBarHidden = false
         self.addChildViewController(nav)
-        
+        if #available(iOS 11.0, *) {
+             nav.navigationBar.yzc_top = childVc.view.safeAreaLayoutGuide.layoutFrame.maxY
+        }
         let offset:CGFloat = 5
         childVc.tabBarItem.imageInsets = UIEdgeInsetsMake(offset, 0, -offset, 0);
-        
     }
     
     

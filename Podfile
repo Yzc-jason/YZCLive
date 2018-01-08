@@ -9,4 +9,7 @@ target 'YZCLive' do
 	pod 'FLEX', '~> 2.4.0'
     pod 'RxSwift',    '~> 4.0.0-rc.0'
     pod 'RxCocoa',    '~> 4.0.0-rc.0'
+    pod 'RxDataSources', '~> 3.0'
+    pod 'ObjectMapper'
+    pod 'Kingfisher'
 end
