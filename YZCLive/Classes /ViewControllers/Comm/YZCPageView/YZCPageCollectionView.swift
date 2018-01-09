@@ -14,9 +14,14 @@ protocol YZCPageCollectionViewDataSource: class {
     func pageCollectionView(_ pageCollectionView: YZCPageCollectionView, _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
 
+protocol YZCPageCollectionViewDelegate: class {
+     func pageCollectionView(_ pageCollectionView: YZCPageCollectionView, didSelectItemAt indexPath: IndexPath)
+}
+
 class YZCPageCollectionView: UIView {
 
     weak var dataSource: YZCPageCollectionViewDataSource?
+    weak var delegate: YZCPageCollectionViewDelegate?
     
     fileprivate var titles: [String]
     fileprivate var isTitleInTop: Bool
@@ -51,7 +56,6 @@ extension YZCPageCollectionView {
         titleView = YZCTitleView(frame: titleFrame, titles: titles, style: style)
         addSubview(titleView)
         titleView.delegate = self
-        titleView.backgroundColor = UIColor.randomColor()
         
         let pageControlHeight : CGFloat = 20
         let pageControlY = isTitleInTop ? (bounds.height - pageControlHeight) : (bounds.height - pageControlHeight - style.titleHeight)
@@ -60,7 +64,6 @@ extension YZCPageCollectionView {
         pageControl.numberOfPages = 4
         pageControl.isEnabled = false
         addSubview(pageControl)
-        pageControl.backgroundColor = UIColor.randomColor()
         
         let collectionViewY = isTitleInTop ? style.titleHeight : 0
         let collectionViewFrame = CGRect(x: 0, y: collectionViewY, width: bounds.width, height: bounds.height - style.titleHeight - pageControlHeight)
@@ -70,7 +73,7 @@ extension YZCPageCollectionView {
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         addSubview(collectionView)
-        collectionView.backgroundColor = UIColor.randomColor()
+        pageControl.backgroundColor = collectionView.backgroundColor
     }
 }
 
@@ -82,6 +85,10 @@ extension YZCPageCollectionView {
     
     func register(nib : UINib, identifier : String) {
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
+    }
+    
+    func reloadData() {
+        self.collectionView.reloadData()
     }
 }
 
@@ -131,6 +138,10 @@ extension YZCPageCollectionView : UICollectionViewDelegate {
             sourceIndexPath = indexPath
         }
         pageControl.currentPage = indexPath.item / (layout.cols * layout.rows)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.pageCollectionView(self, didSelectItemAt: indexPath)
     }
 }
 

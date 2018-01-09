@@ -9,14 +9,22 @@
 
 import UIKit
 
+private let kChatToolsViewHeight : CGFloat = 44
+private let kGiftlistViewHeight : CGFloat = 320
+
 class RoomViewController: UIViewController,Emitterable {
     
     @IBOutlet weak var bgImageView: UIImageView!
+    
+    fileprivate lazy var chatToolView : ChatToolsView = ChatToolsView.loadFromNib()
+    fileprivate lazy var giftView : GiftListView = GiftListView.loadFromNib()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +43,7 @@ class RoomViewController: UIViewController,Emitterable {
 extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
+        setUpBottom()
     }
     
     fileprivate func setupBlurView() {
@@ -43,6 +52,17 @@ extension RoomViewController {
         blurView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         blurView.frame = bgImageView.bounds
         bgImageView.addSubview(blurView)
+    }
+    
+    fileprivate func setUpBottom() {
+        chatToolView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kChatToolsViewHeight)
+        chatToolView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        chatToolView.delegate = self
+        view.addSubview(chatToolView)
+        
+        giftView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kGiftlistViewHeight)
+        giftView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        view.addSubview(giftView)
     }
 }
 
@@ -56,11 +76,13 @@ extension RoomViewController {
     @IBAction func bottomMenuClick(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            print("点击了聊天")
+            chatToolView.inputTextField.becomeFirstResponder()
         case 1:
             print("点击了分享")
         case 2:
-            print("点击了礼物")
+            UIView.animate(withDuration: 0.25, animations: {
+                self.giftView.frame.origin.y = kScreenH - kGiftlistViewHeight
+            })
         case 3:
             print("点击了更多")
         case 4:
@@ -70,5 +92,33 @@ extension RoomViewController {
         default:
             fatalError("未处理按钮")
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        chatToolView.inputTextField.resignFirstResponder()
+        UIView.animate(withDuration: 0.25, animations: {
+            self.giftView.frame.origin.y = kScreenH
+        })
+    }
+}
+
+// MARK:- 监听键盘的弹出
+extension RoomViewController {
+    @objc fileprivate func keyboardWillChangeFrame(_ note : Notification) {
+        let duration = note.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        let endFrame = (note.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let inputViewY = endFrame.origin.y - kChatToolsViewHeight
+        
+        UIView.animate(withDuration: duration, animations: {
+            UIView.setAnimationCurve(UIViewAnimationCurve(rawValue: 7)!)
+            let endY = inputViewY == (self.view.bounds.height - kChatToolsViewHeight) ? self.view.bounds.height : inputViewY
+            self.chatToolView.frame.origin.y = endY
+        })
+    }
+}
+
+extension RoomViewController : ChatToolsViewDelegate {
+    func chatToolsView(toolView: ChatToolsView, message: String) {
+        log.debug(message)
     }
 }

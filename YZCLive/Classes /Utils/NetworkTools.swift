@@ -31,11 +31,13 @@ enum MethodType {
 class NetworkTools {
     class func requestData(_ type : MethodType, URLString : String, parameters : [String : Any]? = nil, finishedCallback :  @escaping (_ result : Any) -> ()) {
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
-        Alamofire.request(URLString, method: method, parameters: parameters).validate(contentType: ["text/plain"]).responseJSON { (response) in
+        Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
+            log.debug(response)
             guard let result = response.result.value else {
                 log.debug(response.result.error!)
                 return
             }
+
             finishedCallback(result)
         }
     }
