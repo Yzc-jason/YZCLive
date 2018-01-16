@@ -23,6 +23,7 @@ class YZCContentView: UIView {
     fileprivate weak var parentVc: UIViewController!
     fileprivate var isForBidScrollDelegate: Bool = false
     fileprivate var startOffsetX: CGFloat = 0
+    fileprivate var isForbidScroll : Bool = false
     
     fileprivate lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -76,8 +77,33 @@ extension YZCContentView : UICollectionViewDelegate {
         startOffsetX = scrollView.contentOffset.x
     }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        contentEndScroll()
+        scrollView.isScrollEnabled = true
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            contentEndScroll()
+        } else {
+            scrollView.isScrollEnabled = false
+        }
+    }
+    
+    private func contentEndScroll() {
+        guard !isForbidScroll else { return }
+        
+        //        let currentIndex = Int(collectionView.contentOffset.x / collectionView.bounds.width)
+        delegate?.contentViewEndScroll?(self)
+        //        delegate?.contentView(self, targetIndex: currentIndex)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if isForBidScrollDelegate { return } //判断是否是点击事件
+        
+        guard startOffsetX != scrollView.contentOffset.x, !isForbidScroll else {
+            return
+        }
         
         var progress: CGFloat = 0
         var soucreIndex: Int = 0
@@ -112,16 +138,6 @@ extension YZCContentView : UICollectionViewDelegate {
         }
         
         delegate?.contentView(self, progress: progress, sourceIndex: soucreIndex, targetIndex: targetIdnex)
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        delegate?.contentViewEndScroll?(self)
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate {
-            delegate?.contentViewEndScroll?(self)
-        }
     }
 }
 

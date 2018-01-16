@@ -18,6 +18,8 @@ class RoomViewController: UIViewController,Emitterable {
     
     fileprivate lazy var chatToolView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftView : GiftListView = GiftListView.loadFromNib()
+    fileprivate lazy var roomVM : RoomViewModel = RoomViewModel()
+    var anchor : AnchorModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class RoomViewController: UIViewController,Emitterable {
         setupUI()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        loadRoomInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -120,5 +124,20 @@ extension RoomViewController {
 extension RoomViewController : ChatToolsViewDelegate {
     func chatToolsView(toolView: ChatToolsView, message: String) {
         log.debug(message)
+    }
+}
+
+//MARK:- 加载房间数据
+extension RoomViewController {
+    fileprivate func loadRoomInfo() {
+        if let roomid = anchor?.roomid, let uid = anchor?.uid {
+            roomVM.loadLiveURL(roomid, uid, {
+                self.setUpDisplayView()
+            })
+        }
+    }
+    
+    fileprivate func setUpDisplayView() {
+        
     }
 }

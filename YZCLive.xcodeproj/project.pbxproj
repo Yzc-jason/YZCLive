@@ -51,6 +51,7 @@
 		96858A932004AA8500DE7FC0 /* GiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96858A912004AA8500DE7FC0 /* GiftViewCell.xib */; };
 		96858A962004AABF00DE7FC0 /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A942004AABF00DE7FC0 /* GiftListView.swift */; };
 		96858A972004AABF00DE7FC0 /* GiftListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96858A952004AABF00DE7FC0 /* GiftListView.xib */; };
+		96B46A4B200DE7D4008DB69C /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B46A4A200DE7D4008DB69C /* RoomViewModel.swift */; };
 		96D4992C1FC55F9200A8AB4E /* Array+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D4992B1FC55F9200A8AB4E /* Array+Mapper.swift */; };
 		D7401AE51F931929009CD916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7401AE41F931929009CD916 /* Assets.xcassets */; };
 		D7401AF31F931929009CD916 /* YZCLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7401AF21F931929009CD916 /* YZCLiveTests.swift */; };
@@ -136,6 +137,7 @@
 		96858A912004AA8500DE7FC0 /* GiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GiftViewCell.xib; path = "../../../../../../../Desktop/03-XMGTV(礼物布局)/XMGTV/Classes/Live/View/GiftView/GiftViewCell.xib"; sourceTree = "<group>"; };
 		96858A942004AABF00DE7FC0 /* GiftListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
 		96858A952004AABF00DE7FC0 /* GiftListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftListView.xib; sourceTree = "<group>"; };
+		96B46A4A200DE7D4008DB69C /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		96D4992B1FC55F9200A8AB4E /* Array+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Mapper.swift"; sourceTree = "<group>"; };
 		B9F1D51656BC4F7B62675535 /* Pods_YZCLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YZCLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7401ADA1F931929009CD916 /* YZCLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZCLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,6 +270,7 @@
 			children = (
 				96858A7F20046F4E00DE7FC0 /* EmoticonViewModel.swift */,
 				96858A832004A92F00DE7FC0 /* GiftViewModel.swift */,
+				96B46A4A200DE7D4008DB69C /* RoomViewModel.swift */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				96540643200324D10084BC55 /* WaterfallLayout.swift in Sources */,
 				96858A842004A92F00DE7FC0 /* GiftViewModel.swift in Sources */,
 				96858A8020046F4E00DE7FC0 /* EmoticonViewModel.swift in Sources */,
+				96B46A4B200DE7D4008DB69C /* RoomViewModel.swift in Sources */,
 				D79D5E4B1FA8C0F2006B185B /* HomeCollectionViewCell.swift in Sources */,
 				D75B18092003CB8A00F4CDA4 /* Emitterable.swift in Sources */,
 				96858A4B2003317500DE7FC0 /* KingfisherExtension.swift in Sources */,

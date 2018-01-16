@@ -16,6 +16,7 @@ class AnchorModel: BaseModel {
     @objc var live : Int = 0 // 是否在直播
     @objc var push : Int = 0 // 直播显示方式
     @objc var focus : Int = 0 // 关注数
+    @objc var uid : String = ""
     
     @objc var isEvenIndex : Bool = false
 }
