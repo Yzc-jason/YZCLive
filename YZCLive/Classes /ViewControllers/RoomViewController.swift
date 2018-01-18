@@ -8,6 +8,7 @@
 
 
 import UIKit
+import IJKMediaFramework
 
 private let kChatToolsViewHeight : CGFloat = 44
 private let kGiftlistViewHeight : CGFloat = 320
@@ -15,10 +16,16 @@ private let kGiftlistViewHeight : CGFloat = 320
 class RoomViewController: UIViewController,Emitterable {
     
     @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var roomNumberLabel: UILabel!
+    @IBOutlet weak var onlineLabel: UILabel!
+    
     
     fileprivate lazy var chatToolView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftView : GiftListView = GiftListView.loadFromNib()
     fileprivate lazy var roomVM : RoomViewModel = RoomViewModel()
+    fileprivate var player : IJKFFMoviePlayerController?
     var anchor : AnchorModel?
     
     override func viewDidLoad() {
@@ -40,6 +47,11 @@ class RoomViewController: UIViewController,Emitterable {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        player?.shutdown()
+    }
 }
 
 
@@ -48,6 +60,7 @@ extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
         setUpBottom()
+        setUpInfo()
     }
     
     fileprivate func setupBlurView() {
@@ -67,6 +80,14 @@ extension RoomViewController {
         giftView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kGiftlistViewHeight)
         giftView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         view.addSubview(giftView)
+    }
+    
+    fileprivate func setUpInfo() {
+        bgImageView.setImage(anchor?.pic74)
+        iconImageView.setImage(anchor?.pic51)
+        nickNameLabel.text = anchor?.name
+        roomNumberLabel.text = "\(anchor?.roomid ?? 0)"
+        onlineLabel.text = "\(anchor?.focus ?? 0)"
     }
 }
 
@@ -134,10 +155,29 @@ extension RoomViewController {
             roomVM.loadLiveURL(roomid, uid, {
                 self.setUpDisplayView()
             })
-        }
+        }   
     }
     
     fileprivate func setUpDisplayView() {
         
+        IJKFFMoviePlayerController.setLogReport(false)
+        
+        let url = URL(string: roomVM.liveURL)
+        player = IJKFFMoviePlayerController(contentURL: url, with: nil)
+        
+        if anchor?.push == 1 {
+            let screenW = UIScreen.main.bounds.width
+            player?.view.frame = CGRect(x: 0, y: 150, width: screenW, height: screenW * 3 / 4)
+            player?.view.center = bgImageView.center
+        } else {
+            player?.view.frame = bgImageView.bounds
+        }
+        
+        bgImageView.addSubview(player!.view)
+        
+        DispatchQueue.global().async {
+            self.player?.prepareToPlay()
+            self.player?.play()
+        }
     }
 }

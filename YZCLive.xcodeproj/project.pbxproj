@@ -28,8 +28,6 @@
 		96540643200324D10084BC55 /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96540642200324D10084BC55 /* WaterfallLayout.swift */; };
 		96858A4520032E6400DE7FC0 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A4420032E6400DE7FC0 /* HomeViewCell.swift */; };
 		96858A4720032E7300DE7FC0 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96858A4620032E7200DE7FC0 /* HomeViewCell.xib */; };
-		96858A4A2003317500DE7FC0 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A482003317500DE7FC0 /* NetworkTools.swift */; };
-		96858A4B2003317500DE7FC0 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A492003317500DE7FC0 /* KingfisherExtension.swift */; };
 		96858A582004618C00DE7FC0 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A562004618C00DE7FC0 /* AnchorModel.swift */; };
 		96858A592004618C00DE7FC0 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A572004618C00DE7FC0 /* HomeType.swift */; };
 		96858A5E2004657900DE7FC0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A5C2004657900DE7FC0 /* HomeViewModel.swift */; };
@@ -47,8 +45,6 @@
 		96858A8A2004A98000DE7FC0 /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A882004A98000DE7FC0 /* EmoticonPackage.swift */; };
 		96858A8C2004A99000DE7FC0 /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A8B2004A99000DE7FC0 /* GiftModel.swift */; };
 		96858A8E2004A9D400DE7FC0 /* GiftPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A8D2004A9D400DE7FC0 /* GiftPackage.swift */; };
-		96858A922004AA8500DE7FC0 /* GiftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A902004AA8400DE7FC0 /* GiftViewCell.swift */; };
-		96858A932004AA8500DE7FC0 /* GiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96858A912004AA8500DE7FC0 /* GiftViewCell.xib */; };
 		96858A962004AABF00DE7FC0 /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858A942004AABF00DE7FC0 /* GiftListView.swift */; };
 		96858A972004AABF00DE7FC0 /* GiftListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96858A952004AABF00DE7FC0 /* GiftListView.xib */; };
 		96B46A4B200DE7D4008DB69C /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B46A4A200DE7D4008DB69C /* RoomViewModel.swift */; };
@@ -56,10 +52,16 @@
 		D7401AE51F931929009CD916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7401AE41F931929009CD916 /* Assets.xcassets */; };
 		D7401AF31F931929009CD916 /* YZCLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7401AF21F931929009CD916 /* YZCLiveTests.swift */; };
 		D7401AFE1F93192A009CD916 /* YZCLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7401AFD1F93192A009CD916 /* YZCLiveUITests.swift */; };
-		D75B18022003C34700F4CDA4 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75B18002003C34600F4CDA4 /* RoomViewController.swift */; };
-		D75B18032003C34700F4CDA4 /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75B18012003C34700F4CDA4 /* RoomViewController.xib */; };
 		D75B18072003CB6600F4CDA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75B18062003CB6600F4CDA4 /* AppDelegate.swift */; };
 		D75B18092003CB8A00F4CDA4 /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75B18082003CB8A00F4CDA4 /* Emitterable.swift */; };
+		D76E58E62010C9DF0073A12F /* GiftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E58E42010C9DF0073A12F /* GiftViewCell.swift */; };
+		D76E58E72010C9DF0073A12F /* GiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76E58E52010C9DF0073A12F /* GiftViewCell.xib */; };
+		D76E58EA2010CA2C0073A12F /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E58E82010CA2C0073A12F /* NetworkTools.swift */; };
+		D76E58EB2010CA2C0073A12F /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E58E92010CA2C0073A12F /* KingfisherExtension.swift */; };
+		D76E58EE2010CA6A0073A12F /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E58EC2010CA6A0073A12F /* RoomViewController.swift */; };
+		D76E58EF2010CA6A0073A12F /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76E58ED2010CA6A0073A12F /* RoomViewController.xib */; };
+		D76E58F22010CADA0073A12F /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E58F12010CADA0073A12F /* IJKMediaFramework.framework */; };
+		D76E58F42010CB3F0073A12F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E58F32010CB3F0073A12F /* libz.tbd */; };
 		D79D5E4B1FA8C0F2006B185B /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79D5E4A1FA8C0F2006B185B /* HomeCollectionViewCell.swift */; };
 		D7A9BAC81FA765CD003B22A5 /* AchorlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A9BAC71FA765CD003B22A5 /* AchorlModel.swift */; };
 		D7C2FB281F9649D600248F91 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7401B0E1F9319D7009CD916 /* UIBarButtonItem+Extension.swift */; };
@@ -114,8 +116,6 @@
 		96540642200324D10084BC55 /* WaterfallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
 		96858A4420032E6400DE7FC0 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		96858A4620032E7200DE7FC0 /* HomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
-		96858A482003317500DE7FC0 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTools.swift; path = "YZCLive/Classes /Utils/NetworkTools.swift"; sourceTree = SOURCE_ROOT; };
-		96858A492003317500DE7FC0 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KingfisherExtension.swift; path = "YZCLive/Classes /Utils/KingfisherExtension.swift"; sourceTree = SOURCE_ROOT; };
 		96858A562004618C00DE7FC0 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		96858A572004618C00DE7FC0 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
 		96858A5C2004657900DE7FC0 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -133,8 +133,6 @@
 		96858A882004A98000DE7FC0 /* EmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonPackage.swift; sourceTree = "<group>"; };
 		96858A8B2004A99000DE7FC0 /* GiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
 		96858A8D2004A9D400DE7FC0 /* GiftPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPackage.swift; sourceTree = "<group>"; };
-		96858A902004AA8400DE7FC0 /* GiftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GiftViewCell.swift; path = "../../../../../../../Desktop/03-XMGTV(礼物布局)/XMGTV/Classes/Live/View/GiftView/GiftViewCell.swift"; sourceTree = "<group>"; };
-		96858A912004AA8500DE7FC0 /* GiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GiftViewCell.xib; path = "../../../../../../../Desktop/03-XMGTV(礼物布局)/XMGTV/Classes/Live/View/GiftView/GiftViewCell.xib"; sourceTree = "<group>"; };
 		96858A942004AABF00DE7FC0 /* GiftListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
 		96858A952004AABF00DE7FC0 /* GiftListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftListView.xib; sourceTree = "<group>"; };
 		96B46A4A200DE7D4008DB69C /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
@@ -152,10 +150,16 @@
 		D7401B0E1F9319D7009CD916 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		D7401B0F1F9319D7009CD916 /* Uivew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uivew+Extension.swift"; sourceTree = "<group>"; };
 		D7401B101F9319D7009CD916 /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
-		D75B18002003C34600F4CDA4 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
-		D75B18012003C34700F4CDA4 /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		D75B18062003CB6600F4CDA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75B18082003CB8A00F4CDA4 /* Emitterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
+		D76E58E42010C9DF0073A12F /* GiftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewCell.swift; sourceTree = "<group>"; };
+		D76E58E52010C9DF0073A12F /* GiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftViewCell.xib; sourceTree = "<group>"; };
+		D76E58E82010CA2C0073A12F /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		D76E58E92010CA2C0073A12F /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		D76E58EC2010CA6A0073A12F /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomViewController.swift; path = "YZCLive/Classes /ViewControllers/RoomViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D76E58ED2010CA6A0073A12F /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RoomViewController.xib; path = "YZCLive/Classes /ViewControllers/RoomViewController.xib"; sourceTree = SOURCE_ROOT; };
+		D76E58F12010CADA0073A12F /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		D76E58F32010CB3F0073A12F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D79D5E4A1FA8C0F2006B185B /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D7A9BAC71FA765CD003B22A5 /* AchorlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchorlModel.swift; sourceTree = "<group>"; };
 		D7F4D1551F9F964200A628FC /* YZCTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZCTabbar.swift; sourceTree = "<group>"; };
@@ -169,7 +173,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76E58F42010CB3F0073A12F /* libz.tbd in Frameworks */,
 				EFEED1D6E4B3DAAF8654DFD2 /* Pods_YZCLive.framework in Frameworks */,
+				D76E58F22010CADA0073A12F /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +199,7 @@
 		3A966F18E551340558329C47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D76E58F32010CB3F0073A12F /* libz.tbd */,
 				B9F1D51656BC4F7B62675535 /* Pods_YZCLive.framework */,
 			);
 			name = Frameworks;
@@ -201,6 +208,7 @@
 		96540612200319980084BC55 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D76E58F02010CADA0073A12F /* IJKPlayer */,
 				96858A7B20046F2C00DE7FC0 /* QHNormalEmotionSort.plist */,
 				96858A7A20046F2B00DE7FC0 /* QHSohuGifSort.plist */,
 				96540613200319C50084BC55 /* types.plist */,
@@ -326,10 +334,10 @@
 		96858A8F2004AA7D00DE7FC0 /* Gift */ = {
 			isa = PBXGroup;
 			children = (
+				D76E58E42010C9DF0073A12F /* GiftViewCell.swift */,
+				D76E58E52010C9DF0073A12F /* GiftViewCell.xib */,
 				96858A942004AABF00DE7FC0 /* GiftListView.swift */,
 				96858A952004AABF00DE7FC0 /* GiftListView.xib */,
-				96858A902004AA8400DE7FC0 /* GiftViewCell.swift */,
-				96858A912004AA8500DE7FC0 /* GiftViewCell.xib */,
 			);
 			path = Gift;
 			sourceTree = "<group>";
@@ -413,8 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				96D4992B1FC55F9200A8AB4E /* Array+Mapper.swift */,
-				96858A492003317500DE7FC0 /* KingfisherExtension.swift */,
-				96858A482003317500DE7FC0 /* NetworkTools.swift */,
 				D7401B0E1F9319D7009CD916 /* UIBarButtonItem+Extension.swift */,
 				D7FD42FE1FB88AF300303312 /* UIDevice+Extension.swift */,
 				D7401B0F1F9319D7009CD916 /* Uivew+Extension.swift */,
@@ -438,6 +444,8 @@
 			isa = PBXGroup;
 			children = (
 				D7F9548D1F96614A00679640 /* Logger.swift */,
+				D76E58E92010CA2C0073A12F /* KingfisherExtension.swift */,
+				D76E58E82010CA2C0073A12F /* NetworkTools.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -476,6 +484,14 @@
 				D75B18062003CB6600F4CDA4 /* AppDelegate.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		D76E58F02010CADA0073A12F /* IJKPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D76E58F12010CADA0073A12F /* IJKMediaFramework.framework */,
+			);
+			path = IJKPlayer;
 			sourceTree = "<group>";
 		};
 		D79D5E481FA8C0F2006B185B /* Home */ = {
@@ -518,8 +534,8 @@
 		D7FD5B051FB9D71D00743C74 /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				D75B18002003C34600F4CDA4 /* RoomViewController.swift */,
-				D75B18012003C34700F4CDA4 /* RoomViewController.xib */,
+				D76E58EC2010CA6A0073A12F /* RoomViewController.swift */,
+				D76E58ED2010CA6A0073A12F /* RoomViewController.xib */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -635,16 +651,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75B18032003C34700F4CDA4 /* RoomViewController.xib in Resources */,
 				96540614200319C50084BC55 /* types.plist in Resources */,
 				96858A4720032E7300DE7FC0 /* HomeViewCell.xib in Resources */,
 				96858A7C20046F2C00DE7FC0 /* QHSohuGifSort.plist in Resources */,
-				96858A932004AA8500DE7FC0 /* GiftViewCell.xib in Resources */,
 				96858A742004692300DE7FC0 /* EmoticonViewCell.xib in Resources */,
 				96858A7D20046F2C00DE7FC0 /* QHNormalEmotionSort.plist in Resources */,
 				96858A972004AABF00DE7FC0 /* GiftListView.xib in Resources */,
 				D7FD5B041FB9D19C00743C74 /* Launch Screen.storyboard in Resources */,
 				96858A722004692300DE7FC0 /* ChatToolsView.xib in Resources */,
+				D76E58EF2010CA6A0073A12F /* RoomViewController.xib in Resources */,
+				D76E58E72010C9DF0073A12F /* GiftViewCell.xib in Resources */,
 				D7401AE51F931929009CD916 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,13 +688,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YZCLive-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		203D5807D025F58EAA2044D8 /* [CP] Embed Pods Frameworks */ = {
@@ -687,9 +706,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YZCLive/Pods-YZCLive-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -730,9 +770,11 @@
 				9654063420031D6D0084BC55 /* CustomTabBarController.swift in Sources */,
 				9654061A20031A480084BC55 /* AnchorViewController.swift in Sources */,
 				D7A9BAC81FA765CD003B22A5 /* AchorlModel.swift in Sources */,
+				D76E58EA2010CA2C0073A12F /* NetworkTools.swift in Sources */,
 				9654063D20031D6D0084BC55 /* YZCPageCollectionView.swift in Sources */,
 				9654063F20031D6D0084BC55 /* YZCPageView.swift in Sources */,
 				D7F9548E1F96614A00679640 /* Logger.swift in Sources */,
+				D76E58E62010C9DF0073A12F /* GiftViewCell.swift in Sources */,
 				96858A892004A98000DE7FC0 /* Emoticon.swift in Sources */,
 				96540643200324D10084BC55 /* WaterfallLayout.swift in Sources */,
 				96858A842004A92F00DE7FC0 /* GiftViewModel.swift in Sources */,
@@ -740,25 +782,23 @@
 				96B46A4B200DE7D4008DB69C /* RoomViewModel.swift in Sources */,
 				D79D5E4B1FA8C0F2006B185B /* HomeCollectionViewCell.swift in Sources */,
 				D75B18092003CB8A00F4CDA4 /* Emitterable.swift in Sources */,
-				96858A4B2003317500DE7FC0 /* KingfisherExtension.swift in Sources */,
 				96858A712004692300DE7FC0 /* ChatToolsView.swift in Sources */,
 				96858A592004618C00DE7FC0 /* HomeType.swift in Sources */,
 				96858A4520032E6400DE7FC0 /* HomeViewCell.swift in Sources */,
-				96858A4A2003317500DE7FC0 /* NetworkTools.swift in Sources */,
 				96858A5E2004657900DE7FC0 /* HomeViewModel.swift in Sources */,
+				D76E58EE2010CA6A0073A12F /* RoomViewController.swift in Sources */,
+				D76E58EB2010CA2C0073A12F /* KingfisherExtension.swift in Sources */,
 				D75B18072003CB6600F4CDA4 /* AppDelegate.swift in Sources */,
 				96858A8E2004A9D400DE7FC0 /* GiftPackage.swift in Sources */,
 				D7C2FB2A1F9649DD00248F91 /* UIViewController+Common.swift in Sources */,
 				9654063720031D6D0084BC55 /* LiveController.swift in Sources */,
 				9654062020031CD90084BC55 /* BaseModel.swift in Sources */,
 				9654064020031D6D0084BC55 /* YZCTitleStyle.swift in Sources */,
-				D75B18022003C34700F4CDA4 /* RoomViewController.swift in Sources */,
 				96858A65200467D600DE7FC0 /* NibLoadable.swift in Sources */,
 				9654063820031D6D0084BC55 /* NavigationController.swift in Sources */,
 				9654063A20031D6D0084BC55 /* ShortViewController.swift in Sources */,
 				D7FD42FF1FB88AF300303312 /* UIDevice+Extension.swift in Sources */,
 				9654063E20031D6D0084BC55 /* YZCPageCollectViewLayout.swift in Sources */,
-				96858A922004AA8500DE7FC0 /* GiftViewCell.swift in Sources */,
 				9654063C20031D6D0084BC55 /* YZCContentView.swift in Sources */,
 				D7C2FB291F9649DA00248F91 /* Uivew+Extension.swift in Sources */,
 				9654063B20031D6D0084BC55 /* UIColor-Extension.swift in Sources */,
@@ -917,6 +957,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLMJ8J23D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YZCLive/Classes\\ /Resource/IJKPlayer/",
+				);
 				INFOPLIST_FILE = YZCLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -936,6 +980,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLMJ8J23D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YZCLive/Classes\\ /Resource/IJKPlayer/",
+				);
 				INFOPLIST_FILE = YZCLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
