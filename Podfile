@@ -12,4 +12,5 @@ target 'YZCLive' do
     pod 'RxDataSources', '~> 3.0'
     pod 'ObjectMapper'
     pod 'Kingfisher'
+    pod 'LFLiveKit'
 end

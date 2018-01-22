@@ -3,6 +3,7 @@ PODS:
   - Differentiator (3.0.1)
   - FLEX (2.4.0)
   - Kingfisher (4.3.1)
+  - LFLiveKit (2.6)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.5.1)
   - FLEX (~> 2.4.0)
   - Kingfisher
+  - LFLiveKit
   - ObjectMapper
   - RxCocoa (~> 4.0.0-rc.0)
   - RxDataSources (~> 3.0)
@@ -36,6 +38,7 @@ SPEC CHECKSUMS:
   Differentiator: ffe513ce1ea4e7198b89fac94d6e281c673055a9
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   Kingfisher: 75541c4b62f02e1fde6f9772303de3d9ebe8f5b3
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
@@ -44,6 +47,6 @@ SPEC CHECKSUMS:
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
   XCGLogger: b4ca980580108cfeaf221afe158f5d89c1be22e0
 
-PODFILE CHECKSUM: 6f35638649a253a7ac664b56436e310c9d02ced3
+PODFILE CHECKSUM: 8ebcd03f2ecc4ecec45b9997c0a53ae0c8a721e5
 
 COCOAPODS: 1.4.0.rc.1
